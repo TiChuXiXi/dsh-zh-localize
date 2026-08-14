@@ -4,6 +4,20 @@
   "description": "DSH 中文化自定义插件：界面语言为中文时，翻译权限预设（Read Only / Workspace Write / Full access）、内置命令描述与提示等界面英文文案",
   "type": "module",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiChuXiXi/dsh-zh-localize.git"
+  },
+  "homepage": "https://github.com/TiChuXiXi/dsh-zh-localize#readme",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "localize",
+    "chinese",
+    "zh",
+    "i18n"
+  ],
   "exports": {
     ".": "./lib/index.js",
     "./client": "./lib/client.js",

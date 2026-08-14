@@ -13,22 +13,29 @@ DSH（DeepSeek Harness）中文化自定义插件：当界面语言设置为中�
 
 ## 安装
 
+### 从 npm 安装（推荐）
+
 ```bash
-# 在 dsh web profile 中安装（在插件目录的父目录执行）
-dsh plugin --profile web add ./dsh-zh-localize
+# 在 dsh web profile 中安装
+dsh plugin --profile web add dsh-zh-localize
 ```
 
 安装完成后**重启 dsh web**，在设置 → 通用 → 语言中选择“中文”即可生效。
 
-### Windows 注意
+### 从本地源码安装（开发调试）
 
-pnpm 在 Windows 上对跨盘绝对路径的 `link:`/`file:` 规格可能生成错误的链接。若 `dsh plugin` 提示 `dsh-zh-localize declares no dsh.bundle`，手动修复链接后重试：
-
-```powershell
-# 以 profile 目录为例
-Remove-Item "$env:USERPROFILE\.dsh\profiles\web\node_modules\dsh-zh-localize" -Force
-New-Item -ItemType Junction -Path "$env:USERPROFILE\.dsh\profiles\web\node_modules\dsh-zh-localize" -Target "<本插件绝对路径>"
+```bash
+# 在插件目录的父目录执行
+dsh plugin --profile web add ./dsh-zh-localize
 ```
+
+> Windows 注意：pnpm 在 Windows 上对跨盘绝对路径的 `link:`/`file:` 规格可能生成错误的链接。若 `dsh plugin` 提示 `dsh-zh-localize declares no dsh.bundle`，手动修复链接后重试：
+>
+> ```powershell
+> # 以 profile 目录为例
+> Remove-Item "$env:USERPROFILE\.dsh\profiles\web\node_modules\dsh-zh-localize" -Force
+> New-Item -ItemType Junction -Path "$env:USERPROFILE\.dsh\profiles\web\node_modules\dsh-zh-localize" -Target "<本插件绝对路径>"
+> ```
 
 ## 工作原理
 
