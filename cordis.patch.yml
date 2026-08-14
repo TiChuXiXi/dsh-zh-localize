@@ -1,0 +1,6 @@
+# dsh-zh-localize bundle patch：把浏览器端中文化插件挂载进 web 组合。
+# 该行是普通 loader 行；包的 dsh.client 声明会让 client-modules 扫描到它，
+# 并把 lib/client.js 作为浏览器端插件注入页面。
+- insert:
+    - id: zh-localize
+      name: 'dsh-zh-localize'

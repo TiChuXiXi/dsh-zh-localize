@@ -1,0 +1,30 @@
+{
+  "name": "dsh-zh-localize",
+  "version": "0.1.0",
+  "description": "DSH 中文化自定义插件：界面语言为中文时，翻译权限预设（Read Only / Workspace Write / Full access）、内置命令描述与提示等界面英文文案",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-commands"
+      ]
+    }
+  },
+  "license": "MIT"
+}
